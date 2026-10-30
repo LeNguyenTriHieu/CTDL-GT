@@ -1,0 +1,10 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no demo.jl --ca=11
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: KT11 - Tich hop ham giao tiep giai_bai() cho VD01
+Input: du_lieu = ([1, 2, 2, 4], 2)
+Ket qua giai_bai(du_lieu): 1
+Kiem tra ket qua: PASSED (DUNG)
+[EXIT CODE: 0]

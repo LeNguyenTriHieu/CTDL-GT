@@ -1,0 +1,10 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no demo.jl --ca=10
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: KT10 - Sai kieu du lieu mang a (a = "1, 2, 3")
+Input: du_lieu = ("1, 2, 3", 2)
+-> Catch Error: ArgumentError: Mang 'a' phai la kieu Vector{Int}.
+Ket qua Validator: PASSED (Da tu choi cau truc dau vao khong hop le)
+[EXIT CODE: 0]

@@ -1,0 +1,10 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no demo.jl --ca=9
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: KT09 - Sai kieu gia tri x (x = 2.5)
+Input: a = [1, 2, 3]; x = 2.5 (Kieu Float64)
+-> Catch Error: ArgumentError: Gia tri 'x' phai la kieu Int.
+Ket qua Validator: PASSED (Da tu choi gia tri x khong phai so nguyen)
+[EXIT CODE: 0]
