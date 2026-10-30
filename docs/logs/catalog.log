@@ -1,0 +1,34 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no scripts/test_catalog.jl
+CATALOG | id | input | expected | actual | result
+CATALOG | T01 | a=[1, 2, 2, 4];x=2 | expected=1 | actual=1 | PASS
+CATALOG | T02 | a=[1, 2, 2, 4];x=5 | expected=4 | actual=4 | PASS
+CATALOG | T03 | a=[1, 3, 3, 3, 5, 7, 9];x=3 | expected=1 | actual=1 | PASS
+CATALOG | T04 | a=[-10, -5, -2, 0, 3, 8];x=-2 | expected=2 | actual=2 | PASS
+CATALOG | T05 | a=[1, 2, 2, 4];x=0 | expected=0 | actual=0 | PASS
+CATALOG | T06 | a=Int[];x=2 | expected=0 | actual=0 | PASS
+CATALOG | T07 | a=[5];x=5 | expected=0 | actual=0 | PASS
+CATALOG | T08 | a=[1, 2, 3, 4, 5];x=6 | expected=5 | actual=5 | PASS
+CATALOG | T09 | a=[2, 2, 2, 2, 2];x=2 | expected=0 | actual=0 | PASS
+CATALOG | T10 | a=[2, 2, 2, 2, 2];x=3 | expected=5 | actual=5 | PASS
+CATALOG | T11 | n=100;a=1..100;x=50 | expected=49 | actual=49 | PASS
+CATALOG | T12 | a=[-5, -4, -3, -2, -1];x=0 | expected=5 | actual=5 | PASS
+CATALOG | V01 | a=[4,1,2,2];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V02 | a=[3,2,1];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V03 | a=[1,2,5,3,7];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V04 | du_lieu=[1,2,2,4] | ArgumentError | ArgumentError | PASS
+CATALOG | V05 | du_lieu=([1,2],2,3) | ArgumentError | ArgumentError | PASS
+CATALOG | V06 | a=String;x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V07 | a=[1,2,3];x=2.5 | ArgumentError | ArgumentError | PASS
+CATALOG | V08 | a=Float;x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V09 | a=[1,2,4];x=2 | true | true | PASS
+CATALOG | V10 | a=[4,1,2];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V11 | giai_bai(([1,2,2,4],2)) | 1 | 1 | PASS
+CATALOG | V12 | giai_bai(([1,2,2,4],5)) | 4 | 4 | PASS
+CATALOG | V13 | a=[1,2,2,4];x=2 | 2 | 2 | PASS
+CATALOG | V14 | a=[1,2,2,4];x=5 | 5 | 5 | PASS
+CATALOG | V15 | a=[1,2,2,4];x=0 | 1 | 1 | PASS
+CATALOG | V16 | a=Int[];x=2 | 1 | 1 | PASS
+CATALOG_OK functional_cases=12 helper_validator_cases=16 total_cases=28
+[EXIT CODE: 0]

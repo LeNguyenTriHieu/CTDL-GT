@@ -1,0 +1,188 @@
+$ git clone <kho_ma_cuc_bo> clone_source_C
+Clone local thanh cong; HEAD=af228fa7ea70b19bd801b7493326bfe2e76a3d75
+$ git rev-parse HEAD
+af228fa7ea70b19bd801b7493326bfe2e76a3d75
+$ julia --startup-file=no scripts/run_all.jl
+julia version 1.12.6
+=== DEMO 1 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A01 - VD01 - Vi du 1 tren phieu de
+Input: Mang a = [1, 2, 2, 4]; Gia tri x = 2
+So phan tu (n): 4
+Chi so i | Gia tri a[i] | So sanh voi x = 2
+       1 |            1 | 1 < 2
+       2 |            2 | 2 >= 2
+       3 |            2 | 2 >= 2
+       4 |            4 | 4 >= 2
+Vi tri bien dau pos (a[pos] >= x): 2
+Ket qua thuc te (Actual)        : 1
+Ket qua ky vong (Expected)      : 1
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 2 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A02 - VD02 - Vi du 2 tren phieu de
+Input: Mang a = [1, 2, 2, 4]; Gia tri x = 5
+So phan tu (n): 4
+Chi so i | Gia tri a[i] | So sanh voi x = 5
+       1 |            1 | 1 < 5
+       2 |            2 | 2 < 5
+       3 |            2 | 2 < 5
+       4 |            4 | 4 < 5
+Vi tri bien dau pos (a[pos] >= x): 5
+Ket qua thuc te (Actual)        : 4
+Ket qua ky vong (Expected)      : 4
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 3 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A03 - TK01 - Ca tu thiet ke (Trung khoa)
+Input: Mang a = [1, 3, 3, 3, 5, 7, 9]; Gia tri x = 3
+So phan tu (n): 7
+Chi so i | Gia tri a[i] | So sanh voi x = 3
+       1 |            1 | 1 < 3
+       2 |            3 | 3 >= 3
+       3 |            3 | 3 >= 3
+       4 |            3 | 3 >= 3
+       5 |            5 | 5 >= 3
+       6 |            7 | 7 >= 3
+       7 |            9 | 9 >= 3
+Vi tri bien dau pos (a[pos] >= x): 2
+Ket qua thuc te (Actual)        : 1
+Ket qua ky vong (Expected)      : 1
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 4 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A04 - TK02 - Ca tu thiet ke (So nguyen am)
+Input: Mang a = [-10, -5, -2, 0, 3, 8]; Gia tri x = -2
+So phan tu (n): 6
+Chi so i | Gia tri a[i] | So sanh voi x = -2
+       1 |          -10 | -10 < -2
+       2 |           -5 | -5 < -2
+       3 |           -2 | -2 >= -2
+       4 |            0 | 0 >= -2
+       5 |            3 | 3 >= -2
+       6 |            8 | 8 >= -2
+Vi tri bien dau pos (a[pos] >= x): 3
+Ket qua thuc te (Actual)        : 2
+Ket qua ky vong (Expected)      : 2
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 5 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A05 - BIEN01 - Ca bien (x nho hon moi phan tu)
+Input: Mang a = [1, 2, 2, 4]; Gia tri x = 0
+So phan tu (n): 4
+Chi so i | Gia tri a[i] | So sanh voi x = 0
+       1 |            1 | 1 >= 0
+       2 |            2 | 2 >= 0
+       3 |            2 | 2 >= 0
+       4 |            4 | 4 >= 0
+Vi tri bien dau pos (a[pos] >= x): 1
+Ket qua thuc te (Actual)        : 0
+Ket qua ky vong (Expected)      : 0
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 6 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A06 - BIEN02 - Ca bien (Mang rong)
+Input: Mang a = Int64[]; Gia tri x = 2
+So phan tu (n): 0
+Chi so i | Gia tri a[i] | So sanh voi x = 2
+       (Mang rong - Khong co phan tu)
+Vi tri bien dau pos (a[pos] >= x): 1
+Ket qua thuc te (Actual)        : 0
+Ket qua ky vong (Expected)      : 0
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 7 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A07 - BIEN03 - Ca bien (Mang 1 phan tu)
+Input: Mang a = [5]; Gia tri x = 5
+So phan tu (n): 1
+Chi so i | Gia tri a[i] | So sanh voi x = 5
+       1 |            5 | 5 >= 5
+Vi tri bien dau pos (a[pos] >= x): 1
+Ket qua thuc te (Actual)        : 0
+Ket qua ky vong (Expected)      : 0
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]
+
+=== DEMO 8 ===
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A08 - LOI01 - Ca input khong hop le
+Input: Mang a = [4, 1, 2, 2]; Gia tri x = 2
+Kiem tra Validator: Mang chua duoc sap xep theo thu tu khong giam
+DA TU CHOI DU LIEU KHI KIEM TRA TIEN DIEU KIEN:
+-> Catch Error: ArgumentError("Mang 'a' chua duoc sap xep theo thu tu khong giam (vi pham tai vi tri i: (a[i]) > (a[i+1])).")
+Ket qua Validator: DUNG (Da bat loi dung nhu mong doi)
+[EXIT CODE: 0]
+
+Test Summary:                                      | Pass  Total  Time
+Kiem thu de tai ca nhan DT22 - Le Nguyen Tri Hieu |   12     12  0.1s
+DA QUA 12 CA CHUC NANG VA CAC KIEM TRA DU LIEU VAO.
+
+EXHAUSTIVE_OK total_tests=26705 n=0..6
+ORACLE=Linear Scan; count(y -> y < x, a) checked
+This checks sorted arrays up to n=6; mathematical proof covers all valid n.
+
+CATALOG | id | input | expected | actual | result
+CATALOG | T01 | a=[1, 2, 2, 4];x=2 | expected=1 | actual=1 | PASS
+CATALOG | T02 | a=[1, 2, 2, 4];x=5 | expected=4 | actual=4 | PASS
+CATALOG | T03 | a=[1, 3, 3, 3, 5, 7, 9];x=3 | expected=1 | actual=1 | PASS
+CATALOG | T04 | a=[-10, -5, -2, 0, 3, 8];x=-2 | expected=2 | actual=2 | PASS
+CATALOG | T05 | a=[1, 2, 2, 4];x=0 | expected=0 | actual=0 | PASS
+CATALOG | T06 | a=Int[];x=2 | expected=0 | actual=0 | PASS
+CATALOG | T07 | a=[5];x=5 | expected=0 | actual=0 | PASS
+CATALOG | T08 | a=[1, 2, 3, 4, 5];x=6 | expected=5 | actual=5 | PASS
+CATALOG | T09 | a=[2, 2, 2, 2, 2];x=2 | expected=0 | actual=0 | PASS
+CATALOG | T10 | a=[2, 2, 2, 2, 2];x=3 | expected=5 | actual=5 | PASS
+CATALOG | T11 | n=100;a=1..100;x=50 | expected=49 | actual=49 | PASS
+CATALOG | T12 | a=[-5, -4, -3, -2, -1];x=0 | expected=5 | actual=5 | PASS
+CATALOG | V01 | a=[4,1,2,2];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V02 | a=[3,2,1];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V03 | a=[1,2,5,3,7];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V04 | du_lieu=[1,2,2,4] | ArgumentError | ArgumentError | PASS
+CATALOG | V05 | du_lieu=([1,2],2,3) | ArgumentError | ArgumentError | PASS
+CATALOG | V06 | a=String;x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V07 | a=[1,2,3];x=2.5 | ArgumentError | ArgumentError | PASS
+CATALOG | V08 | a=Float;x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V09 | a=[1,2,4];x=2 | true | true | PASS
+CATALOG | V10 | a=[4,1,2];x=2 | ArgumentError | ArgumentError | PASS
+CATALOG | V11 | giai_bai(([1,2,2,4],2)) | 1 | 1 | PASS
+CATALOG | V12 | giai_bai(([1,2,2,4],5)) | 4 | 4 | PASS
+CATALOG | V13 | a=[1,2,2,4];x=2 | 2 | 2 | PASS
+CATALOG | V14 | a=[1,2,2,4];x=5 | 5 | 5 | PASS
+CATALOG | V15 | a=[1,2,2,4];x=0 | 1 | 1 | PASS
+CATALOG | V16 | a=Int[];x=2 | 1 | 1 | PASS
+CATALOG_OK functional_cases=12 helper_validator_cases=16 total_cases=28
+
+TRACE_VD01 | a = [1, 2, 2, 4]; x = 2
+Buoc | l | r | giua | a[giua] | so_sanh | pos
+ 0   | 1 | 4 |  -   |    -    |    -    |  5
+ 1   | 1 | 4 |  2   |    2    | 2 >= 2  |  2
+ 2   | 1 | 1 |  1   |    1    | 1 < 2   |  2
+Ket thuc: pos = 2 -> dem = pos - 1 = 1. Doi chieu: DUNG
+
+SCALE | family   | n        | comparisons | time_ns | allocations
+SCALE | small    | 1000     | 10          | 14.2ns  | 0 bytes
+SCALE | medium   | 100000   | 17          | 26.8ns  | 0 bytes
+SCALE | large    | 10000000 | 24          | 42.5ns  | 0 bytes
+
+END_TO_END_OK: demos, tests, independent oracle, trace and scale counters completed.
+[EXIT CODE: 0]

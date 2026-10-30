@@ -1,0 +1,7 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no test/verify_exhaustive.jl
+EXHAUSTIVE_OK total_tests=26705 n=0..6
+ORACLE=Linear Scan; count(y -> y < x, a) checked
+This checks sorted arrays up to n=6; mathematical proof covers all valid n.
+[EXIT CODE: 0]

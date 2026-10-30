@@ -1,0 +1,13 @@
+$ git clone <kho_ma_cuc_bo> clone_source_C
+CLONE_LOCAL_OK
+$ git rev-parse HEAD
+af228fa7ea70b19bd801b7493326bfe2e76a3d75
+$ julia --startup-file=no scripts/run_summary.jl
+julia version 1.12.6
+Test Summary:                                      | Pass  Total  Time
+Kiem thu de tai ca nhan DT22 - Le Nguyen Tri Hieu |   12     12  0.1s
+DA QUA 12 CA CHUC NANG VA CAC KIEM TRA DU LIEU VAO.
+EXHAUSTIVE_OK total_tests=26705 n=0..6
+CATALOG_OK functional_cases=12 helper_validator_cases=16 total_cases=28
+END_TO_END_OK: demos, tests, independent oracle, trace and scale counters completed.
+[EXIT CODE: 0]

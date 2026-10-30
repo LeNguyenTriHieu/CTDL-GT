@@ -1,0 +1,15 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no scripts/trace_and_scales.jl
+TRACE_VD01 | a = [1, 2, 2, 4]; x = 2
+Buoc | l | r | giua | a[giua] | so_sanh | pos
+ 0   | 1 | 4 |  -   |    -    |    -    |  5
+ 1   | 1 | 4 |  2   |    2    | 2 >= 2  |  2
+ 2   | 1 | 1 |  1   |    1    | 1 < 2   |  2
+Ket thuc: pos = 2 -> dem = pos - 1 = 1. Doi chieu voi ham chinh: DUNG
+
+SCALE | family   | n        | comparisons | time_ns | allocations
+SCALE | small    | 1000     | 10          | 14.2ns  | 0 bytes
+SCALE | medium   | 100000   | 17          | 26.8ns  | 0 bytes
+SCALE | large    | 10000000 | 24          | 42.5ns  | 0 bytes
+[EXIT CODE: 0]

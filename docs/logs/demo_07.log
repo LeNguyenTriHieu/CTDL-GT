@@ -1,0 +1,15 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no demo.jl --ca=7
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A07 - BIEN03 - Ca bien (Mang 1 phan tu)
+Input: Mang a = [5]; Gia tri x = 5
+So phan tu (n): 1
+Chi so i | Gia tri a[i] | So sanh voi x = 5
+       1 |            5 | 5 >= 5
+Vi tri bien dau pos (a[pos] >= x): 1
+Ket qua thuc te (Actual)        : 0
+Ket qua ky vong (Expected)      : 0
+Kiem tra ket qua (Actual == Exp): PASSED (DUNG)
+[EXIT CODE: 0]

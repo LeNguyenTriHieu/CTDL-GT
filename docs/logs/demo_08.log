@@ -1,0 +1,12 @@
+$ julia --version
+julia version 1.12.6
+$ julia --startup-file=no demo.jl --ca=8
+DEM SO PHAN TU NHO HON X BANG TIM KIEM NHI PHAN
+Sinh vien: Le Nguyen Tri Hieu | MSSV: N24DCDT025 | Lop: D24CQDT01-N
+Ma ca: A08 - LOI01 - Ca input khong hop le
+Input: Mang a = [4, 1, 2, 2]; Gia tri x = 2
+Kiem tra Validator: Mang chua duoc sap xep theo thu tu khong giam
+DA TU CHOI DU LIEU KHI KIEM TRA TIEN DIEU KIEN:
+-> Catch Error: ArgumentError("Mang 'a' chua duoc sap xep theo thu tu khong giam (vi pham tai vi tri i: (a[i]) > (a[i+1])).")
+Ket qua Validator: DUNG (Da bat loi dung nhu mong doi)
+[EXIT CODE: 0]
